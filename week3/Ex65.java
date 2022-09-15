@@ -1,5 +1,5 @@
 package week3;
-
+// lenghts of strings
 import java.util.ArrayList;
 
 public class Ex65 {
