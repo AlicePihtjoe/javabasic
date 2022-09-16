@@ -13,7 +13,7 @@ public class Ex4 {
 
             for (int i = 1; i <= 100; i++) {
                 Suitcase suitcase = new Suitcase(100);
-                Thing brick = new Thing("Brick", 1);
+                Thing brick = new Thing("Brick", i);
                 suitcase.addThing(brick);
                 container.addSuitcase(suitcase);
 
