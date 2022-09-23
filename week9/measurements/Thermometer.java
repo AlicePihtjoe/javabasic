@@ -15,7 +15,7 @@ public class Thermometer implements Sensor{
     }
 
     @Override
-    public void off() throws IllegalAccessException {
+    public void off() {
      this.isOn = false;
     }
 
@@ -25,15 +25,10 @@ public class Thermometer implements Sensor{
 
         if(this.isOn){
             int measuredValue = (int)(Math.round(Math.random() * 30 - Math.random() * -30 + Math.random() * 30));
-
-
             return measuredValue;
-
         } else {
             throw new IllegalStateException("Thermometer can measure if it is on.");
         }
-
-
     }
 }
 
