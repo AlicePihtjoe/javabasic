@@ -49,6 +49,38 @@ public class CashRegister {
         }
     }
 
+    public boolean payEconomical(LyyraCard card) {
+        // the price of the economical lunch is 2.50 euros
+        // if the balance of the card is at least the price of the lunch:
+        //    the amount of sold lunches is incremented by one
+        //    the method returns true
+        // if not, the method returns false
+
+        if(card.balance() >= 2.5) {
+            card.pay(2.5);
+            economicalSold += 1;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean payGourmet(LyyraCard card) {
+        // the price of the gourmet lunch is 4.00 euros
+        // if the balance of the card is at least the price of the lunch:
+        //    the amount of sold lunches is incremented by one
+        //    the method returns true
+        // if not, the method returns false
+
+        if(card.balance() >= 4.00){
+            card.pay(4);
+            gourmetSold += 1;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public String toString() {
         return "money in register "+cashInRegister+" economical lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
     }
