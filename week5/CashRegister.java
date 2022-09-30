@@ -81,6 +81,11 @@ public class CashRegister {
         }
     }
 
+    void loadMoneyToCard(LyyraCard card, double sum) {
+        card.loadMoney(sum);
+        cashInRegister += sum;
+    }
+
     public String toString() {
         return "money in register "+cashInRegister+" economical lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
     }
